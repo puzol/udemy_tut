@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: arial-black, arial;
+  font-size: 15px;
+  line-height: 1.5em;
+  background: #f4f4f4;
+}
+
+#container {
+  background-color: #333333;
+  margin: 50px auto;
+  overflow: auto;
+  width: 60%;
+  min-height: 600px;
+}
+
+header h1 {
+  color: white;
+  font-size: 22px;
+  padding: 15px 0 10px 10px;
+  border-bottom: 1px solid white;
+}
+
+#shouts {
+  width: 90%;
+  background-color: #f4f4f4;
+  height: 400px;
+  margin: 20px auto;
+  overflow: auto;
+}
+
+.shout {
+  list-style: none;
+  padding: 8px;
+  border-bottom: 1px dotted #cccccc;
+}
+
+.shout span {
+  font-size: 12px;
+  color: #cccccc;
+}
+
+.input_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#input {
+  width: 90%;
+  min-height: 80px;
+  margin: auto;
+  padding: 0;
+}
+
+#input input[type='text'] {
+  height: 25px;
+  width: 48%;
+  padding: 3px;
+  margin-bottom: 20px;
+  border: 1px solid #333333;
+}
+
+#input .shout_btn {
+  padding: 5px;
+  margin-bottom: 30px;
+  width: 100%;
+  margin: 10px auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .input_wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  #input input[type='text'] {
+    width: 98%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
