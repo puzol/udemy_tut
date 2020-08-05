@@ -17,6 +17,13 @@ body {
   overflow: auto;
   width: 60%;
   min-height: 600px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+header {
+  border-top-right-radius: 40px;
+  background-color: #ab1813;
 }
 
 header h1 {
