@@ -1,6 +1,7 @@
 $lightGray:#f4f4f4;
 $mediumGray: #cccccc;
 $darkGray:#1f1f1f;
+$dred:#AB1813;
 
 *{
     margin:0;
@@ -73,6 +74,18 @@ header h1{
   
   .size6{
     font-size:15px;
+  }
+
+  .isred{
+      color:$dred;
+  }
+
+  .isblack{
+      color:$darkGray;
+  }
+
+  .radiotxt{
+    color:white;
   }
 
 .shout span{

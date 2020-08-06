@@ -71,6 +71,18 @@ header h1 {
   font-size: 15px;
 }
 
+.isred {
+  color: #AB1813;
+}
+
+.isblack {
+  color: #1f1f1f;
+}
+
+.radiotxt {
+  color: white;
+}
+
 .shout span {
   font-size: 12px;
   color: #cccccc;

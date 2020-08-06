@@ -35,27 +35,18 @@
         date_default_timezone_set('Europe/Belgrade');
         $time = date('h:i:s a',time());
         $length = strlen($message);
+        $isred = $_POST['isred'];
     
 
-        $sql = "INSERT INTO shouts (user, message, time)
-        VALUES ('$user', '$message', '$time')";
+        $sql = "INSERT INTO shouts (user, message, time, isred)
+        VALUES ('$user', '$message', '$time', $isred)";
     
         if(!mysqli_query($database, $sql)){
             echo "NO!";
         }
         else{
             header('location:index.php');
-            echo $length;
         }
     }
- 
-    /*
-    if($length > 10){
-        ?><p class="manja"></p> <?php
-    }
-    else{
-        ?><p class="veca"></p><?php
-    }
-      */  
 
 ?>

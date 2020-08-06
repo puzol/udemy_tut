@@ -24,6 +24,7 @@
                 <?php
                         $row = $shouts->fetch_assoc();
                         
+                        
 
                         function return_class($lengths){
                             if ($lengths > 0 && $lengths < 5){
@@ -41,11 +42,21 @@
                             }
                         }
 
+                        function redit($boolean){
+                            if ($boolean == 1){
+                                echo "isred";
+                            }else{
+                                echo "";
+                            }
+                        }
+
                         ?>
 
                     <?php while($row = $shouts->fetch_assoc()) : ?>
-                        <?php $length = strlen($row['message']); ?>
-                        <li class="shout <?php return_class($length) ?>"><span><?php echo $row['time'] ?></span> - <?php echo $row['user'] ?>: <?php echo $row['message'] ?></li>
+                        <?php $length = strlen($row['message']);
+                        $isred = $row['isred'];  ?>
+                        
+                        <li class="shout <?php return_class($length) ?> <?php redit($isred) ?>"><span><?php echo $row['time'] ?></span> - <?php echo $row['user'] ?>: <?php echo $row['message'] ?></li>
      
                     <?php endwhile; ?> 
                 </ul>            
@@ -60,7 +71,9 @@
                     </div>
                     
                     <br>
-                    <input type="submit" name="submit" value="Shout it out!" class="shout_btn">
+                    <input type="radio" name="isred" value=0 checked> <span class="radiotxt"> - I'm calm</span> <br>
+                    <input type="radio" name="isred" value=1 > <span  class="radiotxt"> - I'm angry </span> <br> 
+                    <input type="submit" name="submit" value="Shout it out!" class="shout_btn"> 
                 </form>
             </div>
         </div>
