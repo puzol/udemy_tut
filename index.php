@@ -29,7 +29,7 @@
             </div>
 
             <div id="input">
-                <form action="index.php" method="get">
+                <form action="process.php" method="post">
 
                     <div class="input_wrap">
                     <input type="text" name="user" placeholder="Enter your name">

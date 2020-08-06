@@ -1,6 +1,6 @@
 $lightGray:#f4f4f4;
 $mediumGray: #cccccc;
-$darkGray:#333333;
+$darkGray:#1f1f1f;
 
 *{
     margin:0;
@@ -83,6 +83,8 @@ header h1{
     margin-bottom: 30px;
     width:100%;
     margin: 10px auto;
+    font-family: arial black, arial;
+    color:$darkGray;
 }
 
 @media only screen and (max-width:768px){

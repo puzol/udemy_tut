@@ -12,7 +12,7 @@ body {
 }
 
 #container {
-  background-color: #333333;
+  background-color: #1f1f1f;
   margin: 50px auto;
   overflow: auto;
   width: 60%;
@@ -80,7 +80,7 @@ header h1 {
   width: 48%;
   padding: 3px;
   margin-bottom: 20px;
-  border: 1px solid #333333;
+  border: 1px solid #1f1f1f;
 }
 
 #input .shout_btn {
@@ -88,6 +88,8 @@ header h1 {
   margin-bottom: 30px;
   width: 100%;
   margin: 10px auto;
+  font-family: arial black, arial;
+  color: #1f1f1f;
 }
 
 @media only screen and (max-width: 768px) {
