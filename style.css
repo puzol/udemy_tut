@@ -47,6 +47,30 @@ header h1 {
   border-bottom: 1px dotted #cccccc;
 }
 
+.size1 {
+  font-size: 40px;
+}
+
+.size2 {
+  font-size: 35px;
+}
+
+.size3 {
+  font-size: 30px;
+}
+
+.size4 {
+  font-size: 25px;
+}
+
+.size5 {
+  font-size: 20px;
+}
+
+.size6 {
+  font-size: 15px;
+}
+
 .shout span {
   font-size: 12px;
   color: #cccccc;
