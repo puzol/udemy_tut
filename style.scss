@@ -84,9 +84,108 @@ header h1{
       color:$darkGray;
   }
 
-  .radiotxt{
+#isredid, #isblackid{
+    display:none;
+}
+
+#redlabel, #blacklabel{
+    display:inline-block;
+    width:200px;
+    padding:6px 10px 6px 10px;
+    border-radius: 4px;
+    position: relative;
+}
+
+#redlabel_check{
+    height:15px;
+    width:15px;
+    background-color:$dred;
+    position: absolute;
+    top:50%;
+    right:10px;
+    transform: translate(0, -50%);
+    border: 3px solid rgba(255,255,255,0.4);
+    border-radius: 50%;
+    transition: border 0.2s ease;
+}
+
+#redlabel:hover #redlabel_check{
+    border: 3px solid rgba(255,255,255,1);
+}
+
+#redlabel:hover #angry{
+    top:50%;
+}
+
+#isblackid:checked+#redlabel #angry{
+    top:50%;
+}
+
+#blacklabel:hover #zen{
+    top:50%
+}
+
+#isredid:checked+#blacklabel #zen{
+    top:50%;
+}
+
+#blacklabel_check{
+    height:15px;
+    width:15px;
+    background-color:$lightGray;
+    position: absolute;
+    top:50%;
+    right:10px;
+    transform: translate(0, -50%);
+    border: 3px solid rgba(31,31,31,0.4);
+    border-radius: 50%;
+    transition: border 0.2s ease, background-color 0.2s ease;
+}
+
+#blacklabel:hover #blacklabel_check{
+    border: 3px solid rgba(31,31,31,1);
+}
+
+#redlabel{
+    background-color: $dred;
     color:white;
-  }
+}
+
+#blacklabel{
+    background-color: $lightGray;
+    color: $darkGray;
+}
+
+#redlabel, #blacklabel{
+    position:relative;
+    overflow: hidden;
+}
+
+#isredid:checked+#blacklabel div{
+    background-color: rgba(31,31,31,1);
+}
+
+#isblackid:checked+#redlabel div{
+    background-color: rgba(255,255,255,1);
+}
+
+#angry{
+    max-width:70px;
+    position: absolute;
+    top:-50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.3s ease;
+}
+
+#zen{
+    max-width:30px;
+    position: absolute;
+    top:-50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.3s ease;
+}
 
 .shout span{
     font-size:12px;

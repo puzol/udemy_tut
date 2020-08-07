@@ -63,7 +63,7 @@
             </div>
 
             <div id="input">
-                <form action="process.php" method="post">
+                <form action="process.php" method="post" class="main_form">
 
                     <div class="input_wrap">
                     <input type="text" name="user" placeholder="Enter your name">
@@ -71,8 +71,8 @@
                     </div>
                     
                     <br>
-                    <input type="radio" name="isred" value=0 checked> <span class="radiotxt"> - I'm calm</span> <br>
-                    <input type="radio" name="isred" value=1 > <span  class="radiotxt"> - I'm angry </span> <br> 
+                    <input type="radio" id="isredid" name="isred" value=0 checked> <label for="isredid" id="blacklabel">I'm zen<img src="zen.svg" alt="angry_svg" title="angry" id="zen"><div id="blacklabel_check"></div></label>
+                    <input type="radio" id="isblackid" name="isred" value=1 > <label for="isblackid" id="redlabel">I'm angry<img src="31135.svg" alt="angry_svg" title="angry" id="angry"><div id="redlabel_check"></div></label><br> 
                     <input type="submit" name="submit" value="Shout it out!" class="shout_btn"> 
                 </form>
             </div>
