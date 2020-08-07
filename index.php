@@ -18,7 +18,7 @@
             <header>
                 <h1>SHOUT IT! Shoutbox</h1>
             </header>
-            <div id="shouts">
+            <div id="shouts" action="javascript:document.location.reload()">
                 <ul id="shouts_id">
 
                 <?php
@@ -66,8 +66,8 @@
                 <form action="process.php" method="post" class="main_form">
 
                     <div class="input_wrap">
-                    <input type="text" name="user" placeholder="Enter your name">
-                    <input type="text" name="message" placeholder="Enter your message">
+                    <input type="text" name="user" placeholder="Enter your name" id="text_user">
+                    <input type="text" name="message" placeholder="Enter your message" id="text_message">
                     </div>
                     
                     <br>
@@ -79,6 +79,12 @@
         </div>
 
         <script src="scripts.js"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+        </script>
+        
     </body>
 
 </html>
