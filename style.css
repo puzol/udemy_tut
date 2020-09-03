@@ -235,6 +235,13 @@ header h1 {
   color: #1f1f1f;
 }
 
+.writing {
+  padding-left: 15px;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.3);
+  margin-bottom: -4px;
+}
+
 @media only screen and (max-width: 768px) {
   .input_wrap {
     -webkit-box-orient: vertical;
