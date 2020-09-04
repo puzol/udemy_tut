@@ -31,15 +31,16 @@
 
 
         $user = $_POST['user'];
+        $fixedUser = addslashes($user);
         $message = $_POST['message'];
+        $fixedMessage = addslashes($message);
         date_default_timezone_set('Europe/Belgrade');
         $time = date('h:i:s a',time());
         $length = strlen($message);
         $isred = $_POST['isred'];
     
-
         $sql = "INSERT INTO shouts (user, message, time, isred)
-        VALUES ('$user', '$message', '$time', $isred)";
+        VALUES ('$fixedUser', '$fixedMessage', '$time', $isred)";
     
         if(!mysqli_query($database, $sql)){
             echo "NO!";

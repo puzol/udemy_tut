@@ -1,7 +1,7 @@
 <?php include 'database.php' ?>
 
 <?php
-    $query = "SELECT * FROM shouts";
+    $query = "(SELECT * FROM shouts ORDER BY id DESC LIMIT 20) ORDER BY id";
     $shouts = $database->query($query);
 ?>
 
@@ -68,13 +68,26 @@
 
                     <div class="input_wrap">
                     <input type="text" name="user" placeholder="Enter your name" id="text_user" v-model="user">
-                    <input type="text" name="message" placeholder="Enter your message" id="text_message" v-model="message" 
-                    oninput="onInputFun(document.getElementById('shouts').scrollTop,document.getElementById('shouts').scrollHeight)" :disabled="user.length < 2">
+                    <input 
+                    type="text" 
+                    name="message" 
+                    placeholder="Enter your message" 
+                    id="text_message" 
+                    v-model="message" 
+                    oninput="onInputFun(document.getElementById('shouts').scrollTop,document.getElementById('shouts').scrollHeight)" 
+                    :disabled="user.length < 2"
+                    >
                     </div>
                     
                     <br>
-                    <input type="radio" id="isredid" name="isred" value=0 checked> <label for="isredid" id="blacklabel">I'm zen<img src="zen.svg" alt="angry_svg" title="angry" id="zen"><div id="blacklabel_check"></div></label>
-                    <input type="radio" id="isblackid" name="isred" value=1 > <label for="isblackid" id="redlabel">I'm angry<img src="31135.svg" alt="angry_svg" title="angry" id="angry"><div id="redlabel_check"></div></label><br> 
+                    <input type="radio" id="isredid" name="isred" value=0 checked> 
+                        <label for="isredid" id="blacklabel">I'm zen<img src="zen.svg" alt="angry_svg" title="angry" id="zen">
+                            <div id="blacklabel_check"></div>
+                        </label>
+                    <input type="radio" id="isblackid" name="isred" value=1 >
+                        <label for="isblackid" id="redlabel">I'm angry<img src="31135.svg" alt="angry_svg" title="angry" id="angry">
+                            <div id="redlabel_check"></div>
+                        </label><br> 
                     <input type="submit" name="submit" value="Shout it out!" class="shout_btn" :disabled="message.length < 1"> 
                 </form>
             </div>
